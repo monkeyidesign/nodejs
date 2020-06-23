@@ -32,4 +32,11 @@ for ( let index=0; index<data.length; index++ ) {
     }
 }
 data = tempData;
-// console.log(data);
+console.log(data);
+
+// [
+//     { ID: '1', Status: 'Valid' },
+//     { ID: '2', Status: 'Invalid' },
+//     { ID: '3', Status: '' },
+//     { ID: '3', Status: 'sgdsgsdg' }
+// ]
