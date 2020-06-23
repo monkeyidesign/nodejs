@@ -1,13 +1,16 @@
 //run: node file.js
-const name = "Mr.Sam";
-let age = (new Date().getFullYear()) - 1983;
+let name = "Mr.Sam";
+const d = new Date().getFullYear();
+let age = d - 1983;
 const hasHobbies = true;
-
-age = 18;
 
 function userInfo(uName, uAge, uFav){
     return(
         [{'name': uName, 'age': uAge, 'hobbies': uFav}]
     );
 }
+
+age = d - 2014;
+name = "Joseph";
+
 console.log(userInfo(name, age, hasHobbies));
