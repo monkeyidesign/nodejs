@@ -29,3 +29,11 @@ console.log(add(5,7));
 
 const noAugment = () => 5 + 7;
 console.log(noAugment());
+
+const sweetArray = [2, 3, 4, 5, 35]
+const sweeterArray = sweetArray.map(sweetItem => {
+    return sweetItem * age
+})
+
+console.log(sweeterArray)
+//[ 12, 18, 24, 30, 210 ]
