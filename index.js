@@ -1,17 +1,29 @@
-//run: node file.js
-const info = {
-    name: 'Sam',
-    age: new Date().getFullYear() - 1983
+const fetchData = () => {
+    const promise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve('Done!');
+        }, 1500);
+    });
+    return promise;
 };
 
-const getInfo = ({ name }) => {
-    console.log(name);
-}
-getInfo(info)
+setTimeout(() => {
+    console.log('Timer is done!');
+    fetchData()
+        .then(text => {
+            console.log(text);
+            return fetchData();
+        })
+        .then(text2 => {
+            console.log(text2);
+        });
+}, 2000);
 
-const {name, age } = info;
-console.log(age, name);
+console.log('Hello!');
+console.log('Hi!');
 
-const serverScript = ['PHP', 'Laravel', 'Symfony'];
-const [FisrtKey, SecondKey] = serverScript;
-console.log(SecondKey);
+// Hello!
+// Hi!
+// Timer is done!
+// Done!
+// Done!
