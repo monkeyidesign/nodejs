@@ -40,3 +40,9 @@ console.log(data);
 //     { ID: '3', Status: '' },
 //     { ID: '3', Status: 'sgdsgsdg' }
 // ]
+
+//to merge multiple argument
+const toArray = (...args) => {
+    return args;
+};
+console.log(toArray(1,2,3,4,5))
