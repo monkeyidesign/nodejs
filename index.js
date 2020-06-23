@@ -22,7 +22,7 @@ let data = [];
 data[0] = { "ID": "1", "Status": "Valid" };
 data[1] = { "ID": "2", "Status": "Invalid" };
 data[2] = { "ID": "3", "Status": "" };
-data[3] = { "ID": "3", "Status": "sgdsgsdg" };
+data[3] = { "ID": "4", "Status": "sgdsgsdg" };
 // ...
 let tempData = [];
 for ( let index=0; index<data.length; index++ ) {
