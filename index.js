@@ -1,45 +1,35 @@
 //run: node file.js
-let name = "Mr.Sam";
-const d = new Date().getFullYear();
-let age = d - 1983;
-const hasHobbies = true;
+const info = {
+    name: 'Sam',
+    age: new Date().getFullYear() - 1983
+};
+const copiedObject = {...info};
+console.log(copiedObject);
 
-const userInfo = function (uName, uAge, uFav){
-    return(
-        [{'name': uName, 'age': uAge, 'hobbies': uFav}]
-    );
-}
-
-const newUserInfo = (uName, uAge, uFav) => {
-    return(
-        [{'name': uName, 'age': uAge, 'hobbies': uFav}]
-    );
-}
-
-age = d - 2014;
-name = "Joseph";
-
-console.log(userInfo(name, age, hasHobbies));
-console.log(newUserInfo(name, age, hasHobbies));
-
-
-//short form
-const add = (x, y) => x + y;
-console.log(add(5,7));
-
-const noAugment = () => 5 + 7;
-console.log(noAugment());
-
-const sweetArray = [2, 3, 4, 5, 35]
-const sweeterArray = sweetArray.map(sweetItem => {
-    return sweetItem * age
-})
-
-console.log(sweeterArray)
-//[ 12, 18, 24, 30, 210 ]
-
-//add element to array
-const initArray = [2, 3, 4, 5, 35]
-initArray.push(100);
+const initArray = ['PHP', 'Laravel', 'Symfony', 'Vue', 'ReactJS', 'Flutter'];
 console.log(initArray);
-//[ 2, 3, 4, 5, 35, 100 ]
+//[ 'PHP', 'Laravel', 'Symfony', 'Vue', 'ReactJS', 'Flutter' ]
+
+const copiedArray = [...initArray];
+copiedArray.push('NodeJS');
+console.log(copiedArray);
+//['PHP','Laravel', 'Symfony', 'Vue', 'ReactJS', 'Flutter', 'NodeJS']
+
+
+//push in object javascript
+let data = [];
+// ...
+data[0] = { "ID": "1", "Status": "Valid" };
+data[1] = { "ID": "2", "Status": "Invalid" };
+data[2] = { "ID": "3", "Status": "" };
+data[3] = { "ID": "3", "Status": "sgdsgsdg" };
+// ...
+let tempData = [];
+for ( let index=0; index<data.length; index++ ) {
+    //console.log(data[index].Status)
+    if ( data[index].Status === "Invalid" ) {
+        tempData.push( ...data );
+    }
+}
+data = tempData;
+// console.log(data);
