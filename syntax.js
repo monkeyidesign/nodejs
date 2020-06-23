@@ -1,3 +1,4 @@
+//run node file.js
 const name = "Mr.Sam";
 const age = (new Date().getFullYear()) - 1983;
 const hasHobbies = true;
