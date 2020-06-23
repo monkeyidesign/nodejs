@@ -1,7 +1,9 @@
 //run: node file.js
 const name = "Mr.Sam";
-const age = (new Date().getFullYear()) - 1983;
+let age = (new Date().getFullYear()) - 1983;
 const hasHobbies = true;
+
+age = 18;
 
 function userInfo(uName, uAge, uFav){
     return(
