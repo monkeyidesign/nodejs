@@ -37,3 +37,9 @@ const sweeterArray = sweetArray.map(sweetItem => {
 
 console.log(sweeterArray)
 //[ 12, 18, 24, 30, 210 ]
+
+//add element to array
+const initArray = [2, 3, 4, 5, 35]
+initArray.push(100);
+console.log(initArray);
+//[ 2, 3, 4, 5, 35, 100 ]
